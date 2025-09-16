@@ -22,7 +22,7 @@ const NowPlaying: React.FC<NowPlayingProps> = ({ song, colorPalette }) => {
     // v.getPalette()
 
     Vibrant.from(song.image)
-      .maxColorCount(70)
+      .maxColorCount(200)
       .quality(2)
       .getPalette()
       .then((palette) => {
