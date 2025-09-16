@@ -24,7 +24,6 @@ const NowPlaying: React.FC<NowPlayingProps> = ({ song, colorPalette }) => {
     Vibrant.from(song.image)
       .maxColorCount(70)
       .quality(2)
-      .clearFilters()
       .getPalette()
       .then((palette) => {
         if (palette[colorPalette]) {
