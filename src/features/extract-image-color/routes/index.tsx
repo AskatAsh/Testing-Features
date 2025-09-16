@@ -1,3 +1,4 @@
+import LoadingPrimary from "@/components/shared/Loading/LoadingPrimary";
 import type { RouteObject } from "react-router";
 
 export const extractImageColorRoutes: RouteObject[] = [
@@ -6,6 +7,6 @@ export const extractImageColorRoutes: RouteObject[] = [
     lazy: async () => ({
       Component: (await import("./ExtractImageColor")).default,
     }),
-    HydrateFallback: () => <div>Loading...</div>,
+    HydrateFallback: () => <LoadingPrimary />,
   },
 ];

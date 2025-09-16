@@ -1,4 +1,5 @@
 import AppLayout from "@/components/layouts/AppLayout";
+import LoadingPrimary from "@/components/shared/Loading/LoadingPrimary";
 import { extractImageColorRoutes } from "@/features/extract-image-color/routes";
 import { createBrowserRouter, type RouteObject } from "react-router";
 
@@ -9,7 +10,7 @@ const rootChildren: RouteObject[] = [
     lazy: async () => ({
       Component: (await import("@/pages/Home/Home")).default,
     }),
-    HydrateFallback: () => <div>Loading...</div>,
+    HydrateFallback: () => <LoadingPrimary />,
   },
   // feature related routes
   ...extractImageColorRoutes,
