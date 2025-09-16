@@ -24,7 +24,7 @@ export default function Header() {
   const location = useLocation();
 
   return (
-    <header className="border-b container-fluid md:px-0">
+    <header className="border-b container-fluid">
       <div className="flex h-16 items-center justify-between gap-4">
         {/* Left side */}
         <div className="flex items-center gap-2">
