@@ -9,30 +9,31 @@ interface NowPlayingProps {
 const NowPlaying: React.FC<NowPlayingProps> = ({ song, colorPalette }) => {
   const imageRef = useRef<HTMLImageElement | null>(null);
   const [bgColor, setBgColor] = useState<string>("rgba(17, 24, 39, 1)");
+  const [theme, setTheme] = useState({ bodyTextColor: "text-white" });
 
   useEffect(() => {
     if (!song.image) return;
 
     // Use Vibrant to extract palette
+    // const v = new Vibrant(song.image, {
+    //   colorCount: 80,
+    //   quality: 2,
+    // });
+    // v.getPalette()
+
     Vibrant.from(song.image)
+      .maxColorCount(70)
+      .quality(2)
+      .clearFilters()
       .getPalette()
       .then((palette) => {
-        // const {
-        //   Vibrant,
-        //   DarkMuted,
-        //   DarkVibrant,
-        //   LightMuted,
-        //   LightVibrant,
-        //   Muted,
-        // } = palette;
         if (palette[colorPalette]) {
           const rgb = palette[colorPalette].rgb; // [r, g, b]
           setBgColor(`rgba(${rgb.join(",")}, 1)`);
+          setTheme({
+            bodyTextColor: `text-[${palette[colorPalette].bodyTextColor}]`,
+          });
         }
-        // if (LightMuted) {
-        //   const rgb = LightMuted.rgb; // [r, g, b]
-        //   setBgColor(`rgba(${rgb.join(",")}, 1)`);
-        // }
       })
       .catch((err) => {
         console.error("Vibrant error:", err);
@@ -53,8 +54,8 @@ const NowPlaying: React.FC<NowPlayingProps> = ({ song, colorPalette }) => {
         alt={song.title}
         className="w-64 h-64 object-cover aspect-square rounded-lg shadow-lg"
       />
-      <h2 className="text-white text-2xl mt-4">{song.title}</h2>
-      <p className="text-white text-lg">{song.artist}</p>
+      <h2 className={`${theme.bodyTextColor} text-2xl mt-4`}>{song.title}</h2>
+      <p className={`${theme.bodyTextColor} text-lg`}>{song.artist}</p>
     </div>
   );
 };
