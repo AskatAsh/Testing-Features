@@ -9,7 +9,7 @@ interface NowPlayingProps {
 const NowPlaying: React.FC<NowPlayingProps> = ({ song, colorPalette }) => {
   const imageRef = useRef<HTMLImageElement | null>(null);
   const [bgColor, setBgColor] = useState<string>("rgba(17, 24, 39, 1)");
-  const [theme, setTheme] = useState({ bodyTextColor: "text-white" });
+  const [theme, setTheme] = useState({ bodyTextColor: "#fff" });
 
   useEffect(() => {
     if (!song.image) return;
@@ -30,7 +30,7 @@ const NowPlaying: React.FC<NowPlayingProps> = ({ song, colorPalette }) => {
           const rgb = palette[colorPalette].rgb; // [r, g, b]
           setBgColor(`rgba(${rgb.join(",")}, 1)`);
           setTheme({
-            bodyTextColor: `text-[${palette[colorPalette].bodyTextColor}]`,
+            bodyTextColor: `${palette[colorPalette].bodyTextColor}`,
           });
         }
       })
@@ -53,8 +53,12 @@ const NowPlaying: React.FC<NowPlayingProps> = ({ song, colorPalette }) => {
         alt={song.title}
         className="w-64 h-64 object-cover aspect-square rounded-lg shadow-lg"
       />
-      <h2 className={`${theme.bodyTextColor} text-2xl mt-4`}>{song.title}</h2>
-      <p className={`${theme.bodyTextColor} text-lg`}>{song.artist}</p>
+      <h2 style={{ color: theme.bodyTextColor }} className={`text-2xl mt-4`}>
+        {song.title}
+      </h2>
+      <p style={{ color: theme.bodyTextColor }} className={`text-lg`}>
+        {song.artist}
+      </p>
     </div>
   );
 };
