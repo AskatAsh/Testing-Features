@@ -21,7 +21,7 @@ const DownloadPdf = () => {
 
       setLoading(true);
 
-      console.log(htmlString);
+      //   console.log(htmlString);
 
       // 2. Call backend
       const response = await axios.post(
@@ -32,7 +32,7 @@ const DownloadPdf = () => {
           headers: { "Content-Type": "application/json" },
         }
       );
-      console.log(response);
+      //   console.log(response);
 
       // 3. Trigger download
       const url = window.URL.createObjectURL(new Blob([response.data]));
