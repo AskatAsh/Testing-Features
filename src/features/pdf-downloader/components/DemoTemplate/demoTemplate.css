@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+.invoice {
+  width: 794px;
+  padding: 40px;
+  position: relative;
+  margin: 20px auto;
+  background-color: #fff;
+}
+
+.invoice img.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+  width: 400px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.invoice img.logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.invoice * {
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.company-details {
+  text-align: right;
+}
+
+.company-details h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.details {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details .client,
+.details .invoice-info {
+  width: 48%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+table td,
+table th {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background: #f4f4f4;
+  font-weight: 500;
+}
+
+.totals {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.totals table {
+  width: 300px;
+}
+
+.totals td {
+  text-align: right;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+  color: #777;
+}
