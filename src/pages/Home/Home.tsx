@@ -8,7 +8,17 @@ const Home = () => {
 
       {/* Feature added: extract color from images */}
       <div className="p-4 border border-primary bg-primary/10 flex items-center my-6 rounded-md gap-3 text-lg font-medium">
-        <Info className="text-primary" /> New Feature Added:{" "}
+        <Info className="text-primary" /> New Feature Added (21 September,
+        2025):{" "}
+        <Link to="/download-pdf" className="underline text-primary">
+          PDF Downloader using Puppeteer
+        </Link>
+      </div>
+
+      {/* Feature added: extract color from images */}
+      <div className="p-4 border border-primary bg-primary/10 flex items-center my-6 rounded-md gap-3 text-lg font-medium">
+        <Info className="text-primary" /> New Feature Added (19 September,
+        2025):{" "}
         <Link to="/extract-image-color" className="underline text-primary">
           Extract Colors from Image
         </Link>

@@ -21,7 +21,7 @@ const DownloadPdf = () => {
 
       setLoading(true);
 
-      console.log(htmlString);
+      //   console.log(htmlString);
 
       // 2. Call backend
       const response = await axios.post(
