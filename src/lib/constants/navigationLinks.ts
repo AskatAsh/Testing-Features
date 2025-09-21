@@ -12,6 +12,11 @@ export const navigationLinks = [
                 description: "Dynamicaly Extract Color from Image.",
             },
             {
+                href: "/download-pdf",
+                label: "PDF Downloader",
+                description: "Generate and download pdf from html template.",
+            },
+            {
                 href: "#",
                 label: "Components",
                 description: "Browse all components in the library.",

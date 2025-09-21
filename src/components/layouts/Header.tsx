@@ -25,7 +25,7 @@ export default function Header() {
 
   return (
     <header className="border-b container-fluid">
-      <div className="flex h-16 items-center justify-between gap-4">
+      <div className="flex h-16 items-center justify-between gap-4 w-full">
         {/* Left side */}
         <div className="flex items-center gap-2">
           {/* Mobile menu trigger */}

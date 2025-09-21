@@ -1,6 +1,7 @@
 import AppLayout from "@/components/layouts/AppLayout";
 import LoadingPrimary from "@/components/shared/Loading/LoadingPrimary";
 import { extractImageColorRoutes } from "@/features/extract-image-color/routes";
+import { pdfDownloaderRoutes } from "@/features/pdf-downloader/routes";
 import { createBrowserRouter, type RouteObject } from "react-router";
 
 const rootChildren: RouteObject[] = [
@@ -14,6 +15,7 @@ const rootChildren: RouteObject[] = [
   },
   // feature related routes
   ...extractImageColorRoutes,
+  ...pdfDownloaderRoutes,
 ];
 
 export const router = createBrowserRouter([
