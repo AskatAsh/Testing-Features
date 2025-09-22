@@ -1,12 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
-body {
-  font-family: "Roboto", sans-serif;
-  background: #fff;
-  color: #333;
-}
-
 .invoice {
+  font-family: "Roboto", sans-serif;
   width: 794px;
   padding: 40px;
   position: relative;

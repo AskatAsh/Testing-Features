@@ -25,7 +25,8 @@ const DownloadPdf = () => {
 
       // 2. Call backend
       const response = await axios.post(
-        "https://generate-pdf-pi.vercel.app/generate-pdf",
+        // "https://generate-pdf-pi.vercel.app/generate-pdf",
+        "http://localhost:5000/generate-pdf",
         { html: htmlString },
         {
           responseType: "blob",
@@ -48,6 +49,7 @@ const DownloadPdf = () => {
       setLoading(false);
     }
   };
+
   return (
     <main>
       <section className="container-fluid flex flex-wrap gap-3 justify-between items-center mb-6 pb-4 border-b">
@@ -65,7 +67,7 @@ const DownloadPdf = () => {
       </section>
 
       {/* demo template */}
-      <section className="bg-gray-100 p-4 mt-8 overflow-auto">
+      <section className="bg-muted p-4 mt-8 overflow-auto text-[#333]">
         <div ref={templateRef}>
           <DemoTemplate />
         </div>
