@@ -25,8 +25,8 @@ const DownloadPdf = () => {
 
       // 2. Call backend
       const response = await axios.post(
-        // "https://generate-pdf-pi.vercel.app/generate-pdf",
-        "http://localhost:5000/generate-pdf",
+        "https://generate-pdf-pi.vercel.app/generate-pdf",
+        // "http://localhost:5000/generate-pdf",
         { html: htmlString },
         {
           responseType: "blob",
