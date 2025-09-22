@@ -21,7 +21,7 @@ const useGenerateHtmlString = () => {
           <title>${title}</title>
           <style>${templateCSS}</style>
         </head>
-        <body>${templateHtml}</body>
+        <body style="background-color: #fff; color: #333;">${templateHtml}</body>
       </html>
     `;
     },
