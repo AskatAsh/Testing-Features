@@ -98,7 +98,7 @@ export default function Header() {
           </Popover>
           {/* Main nav */}
           <div className="flex items-center gap-6">
-            <Link to="#" className="text-primary hover:text-primary/90">
+            <Link to="/" className="text-primary hover:text-primary/90">
               <CodeXml size={32} />
             </Link>
             {/* Navigation menu */}
