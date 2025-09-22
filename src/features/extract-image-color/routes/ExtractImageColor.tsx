@@ -16,7 +16,7 @@ const ExtractImageColor = () => {
 
   return (
     <div className="py-8 border-l border-r">
-      <section className="container-fluid flex justify-between items-center mb-6 pb-4 border-b">
+      <section className="container-fluid flex flex-wrap gap-3 justify-center sm:justify-between items-center mb-6 pb-4 border-b">
         <h1 className="text-3xl font-bold">Extract Colors from Image</h1>
         <Select
           value={colorPalette}
