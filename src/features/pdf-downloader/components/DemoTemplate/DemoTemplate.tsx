@@ -5,7 +5,8 @@ const DemoTemplate = () => {
     <div className="invoice">
       {/* Watermark */}
       <img
-        src="https://img.icons8.com/plasticine/100/invoice-1.png"
+        src="https://img.icons8.com/plasticine/100/invoice.png"
+        // src="https://ik.imagekit.io/ianttac2k/tr:w-100/qanun-email-template/logo.svg"
         className="watermark"
         alt="Watermark"
       />
@@ -13,7 +14,8 @@ const DemoTemplate = () => {
       <header>
         {/* Logo */}
         <img
-          src="https://img.icons8.com/plasticine/100/invoice-1.png"
+          src="https://img.icons8.com/plasticine/100/invoice.png"
+          // src="https://ik.imagekit.io/ianttac2k/tr:w-100/qanun-email-template/logo.svg"
           className="logo"
           alt="Invoice Logo"
         />
